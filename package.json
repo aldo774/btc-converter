@@ -9,7 +9,7 @@
     "build:watch": "npm run build -- --watch",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint && npm test && npm run test:code-coverage",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --reporter nyan",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --require babel-polyfill",
     "test:tdd": "npm run test -- --watch",
     "test:code-coverage": "nyc npm test"
   },
@@ -46,6 +46,7 @@
   "homepage": "https://github.com/aldo774/btc-converter#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
@@ -67,6 +68,7 @@
     "chalk": "^2.3.2",
     "commander": "^2.15.1",
     "ora": "^2.0.0",
-    "request": "^2.85.0"
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5"
   }
 }
