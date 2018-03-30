@@ -9,5 +9,3 @@ program
   .option('-C, --currency <currency>', 'Currency to be converted. (Default: USD)')
   .option('-A, --amount <currency>', 'Value in Bitcoin to convert. (Default: 1)')
   .parse(process.argv);
-
-console.log(convertBTC(program.currency, program.amount));
